@@ -1,0 +1,17 @@
+{
+    "name": "my-project",
+    "version": "1.0.0",
+    "engines": {
+      "node": "16.x"
+    },
+    "scripts": {
+      "start": "concurrently \"npm run server\" \"npm run client\"",
+      "server": "npm --prefix server start",
+      "client": "npm --prefix client start",
+      "build": "npm --prefix client run build"
+    },
+    "dependencies": {
+      "concurrently": "^6.2.0"
+    }
+  }
+  
