@@ -1,4 +1,4 @@
-// MovieDetailsPage.jsx
+
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
@@ -6,15 +6,15 @@ import { useSelector } from 'react-redux';
 const MovieDetailsPage = () => {
   const { id } = useParams();
   
-  // Access the movies state from Redux
+
   const movies = useSelector((state) => state.movies.movies);
   
-  // Find the movie by ID
+  
   const movie = movies.find((movie) => movie.id === parseInt(id));
 
-  // Log the entire movies state for debugging
-  console.log('Movies state:', movies);
-  console.log('Selected movie:', movie);
+  
+  // console.log(movies);
+  // console.log(movie);
 
   if (!movie) return <p>Movie not found</p>;
 

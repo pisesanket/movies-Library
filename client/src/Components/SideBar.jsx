@@ -2,7 +2,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { setFilter, setSort } from '../Redux/MovieReducer/action';
-// import './SideBar.css';
+
 
 const SideBar = () => {
   const dispatch = useDispatch();

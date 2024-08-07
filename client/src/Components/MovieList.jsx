@@ -26,12 +26,10 @@ const MovieList = () => {
     dispatch(fetchMovies());
   }, [dispatch, location.search]);
 
-  // Apply filter
   const filteredMovies = filter
     ? movies.filter((movie) => movie.rating === parseInt(filter))
     : movies;
 
-  // Apply sort
   const sortedMovies = sort
     ? filteredMovies.slice().sort((a, b) => {
         if (sort === 'asc') {
